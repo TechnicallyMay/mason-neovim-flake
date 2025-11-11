@@ -1,11 +1,17 @@
+{ pkgs, ... }:
 {
+  plugins.treesitter.grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+    gdscript
+    godot_resource
+    gdshader
+  ];
+
   extraConfigLua = ''
   -- paths to check for project.godot file
   local paths_to_check = {'/', '/../'}
   local is_godot_project = false
   local godot_project_path = ""
   local cwd = vim.fn.getcwd()
-  print(godot_project_path)
 
   -- iterate over paths and check
   for key, value in pairs(paths_to_check) do
@@ -20,8 +26,10 @@
   local is_server_running = vim.uv.fs_stat(godot_project_path .. '/server.pipe')
   -- start server, if not already running
   if is_godot_project and not is_server_running then
-      print('Starting server for godot project')
+      print('Starting server for godot project ' .. godot_project_path)
       vim.fn.serverstart(godot_project_path .. '/server.pipe')
+  else
+    print('Not starting a server for a godot project')
   end
   '';
 }
