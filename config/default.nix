@@ -7,5 +7,6 @@
     ./settings.nix
     ./telescope.nix
     ./treesitter.nix
+    ./general-keymaps.nix
   ];
 }
