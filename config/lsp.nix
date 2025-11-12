@@ -28,6 +28,10 @@
           desc = "Hover";
         };
         "<leader>ss" = {
+          action = "document_symbol";
+          desc = "Document Symbol";
+        };
+        "<leader>sS" = {
           action = "workspace_symbol";
           desc = "Workspace Symbol";
         };
