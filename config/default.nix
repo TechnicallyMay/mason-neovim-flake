@@ -7,6 +7,7 @@
     ./lsp.nix
     ./oil.nix
     ./settings.nix
+    ./sleuth.nix
     ./mini.nix
     ./telescope.nix
     ./treesitter.nix
