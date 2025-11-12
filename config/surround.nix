@@ -1,5 +1,5 @@
 {
-  plugin.mini = {
+  plugins.mini = {
     enable = true;
     modules = {
       surround = {
