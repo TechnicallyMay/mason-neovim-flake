@@ -7,6 +7,7 @@
     ./lsp.nix
     ./oil.nix
     ./settings.nix
+    ./surround.nix
     ./telescope.nix
     ./treesitter.nix
   ];
