@@ -41,6 +41,7 @@
           packages = {
             # Lets you run `nix run .` to start nixvim
             default = nvim;
+            launch-nvim-godot = ./launch-neovim-for-godot.nix;
           };
         };
     };
