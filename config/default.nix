@@ -4,7 +4,6 @@
     ./colors.nix
     ./general-keymaps.nix
     ./godot.nix
-    ./lightline.nix
     ./lsp.nix
     ./oil.nix
     ./settings.nix
