@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-  pkgs.writeShellScriptBin "launch-neovim-for-godot" ''
 #!/bin/bash
 
 PROJECT=$1
@@ -12,7 +10,6 @@ echo $PROJECT
 echo $FILE
 echo $COL
 
-
 # Start the server if it's not already running (command will fail if it's already running)
 if [ -e $PIPE_FILE ]
 then
@@ -23,4 +20,3 @@ else
 fi
 
 nvim --server $PIPE_FILE --remote-send "<C-\><C-N>:e $FILE<CR>:call cursor($LINE,$COL)<CR>"
-  ''
