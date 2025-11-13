@@ -1,6 +1,13 @@
 {
     plugins.telescope = {
       enable = true;
+      settings = {
+        defaults = {
+          path_display = [
+            "filename_first"
+          ];
+        };
+      };
       keymaps = {
         "<leader>sg" = {
           action = "live_grep";
