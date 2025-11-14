@@ -5,11 +5,11 @@
     ./general-keymaps.nix
     ./gitsigns.nix
     ./godot.nix
+    ./guess-indent.nix
     ./lsp.nix
     ./mini.nix
     ./oil.nix
     ./settings.nix
-    ./sleuth.nix
     ./telescope.nix
     ./treesitter.nix
     ./undotree.nix
