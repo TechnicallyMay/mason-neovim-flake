@@ -9,12 +9,12 @@
       formatters_by_ft = {
         nix = [
           "alejandra"
+          "squeeze_blanks"
         ];
         gd = [
           "gdformat"
         ];
         "_" = [
-          "squeeze_blanks"
           "trim_whitespace"
           "trim_newlines"
         ];
