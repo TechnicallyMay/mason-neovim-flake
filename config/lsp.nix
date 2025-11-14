@@ -13,15 +13,19 @@
       lspBuf = {
         gd = {
           action = "definition";
-          desc = "Goto Definition";
+          desc = "[G]oTo [D]efinition";
+        };
+        gt = {
+          action = "type_definition";
+          desc = "[G]oTo [T]ype Definition";
         };
         gr = {
           action = "references";
-          desc = "Goto References";
+          desc = "[G]oTo [R]eferences";
         };
         gi = {
           action = "implementation";
-          desc = "Goto Implementation";
+          desc = "[G]oTo [I]mplementation";
         };
         K = {
           action = "hover";
