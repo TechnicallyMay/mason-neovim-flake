@@ -21,6 +21,36 @@
         "<leader>sf" = {
           action = "find_files";
         };
+        "<leader>sr" = {
+          action = "resume";
+        };
+        "<leader>sw" = {
+          action = "grep_string";
+        };
+        "<leader>sR" = {
+          action = "oldfiles";
+        };
+        "<leader>sq" = {
+          action = "quickfix";
+        };
+        "<leader>sd" = {
+          action = "diagnostics";
+        };
+        "<leader>s/" = {
+          action = "current_buffer_fuzzy_find";
+        };
+        "<leader>sh" = {
+          action = "help_tags";
+        };
+        "<leader>sk" = {
+          action = "keymaps";
+        };
+        "<leader>gh" = {
+          action = "bcommits";
+        };
+        "<leader>s'" = {
+          action = "marks";
+        };
         "<C-n>" = {
           action = "move_selection_next";
         };
