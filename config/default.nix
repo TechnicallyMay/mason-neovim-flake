@@ -2,6 +2,7 @@
   imports = [
     ./cmp.nix
     ./colors.nix
+    ./conform.nix
     ./general-keymaps.nix
     ./gitsigns.nix
     ./godot.nix
@@ -10,6 +11,7 @@
     ./mini.nix
     ./oil.nix
     ./settings.nix
+    ./substitute.nix
     ./telescope.nix
     ./treesitter.nix
     ./undotree.nix
