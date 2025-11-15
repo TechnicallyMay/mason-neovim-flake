@@ -11,7 +11,7 @@
           "alejandra"
           "squeeze_blanks"
         ];
-        gd = [
+        gdscript = [
           "gdformat"
         ];
         "_" = [
