@@ -19,7 +19,7 @@
             local fileinfo      = MiniStatusline.section_fileinfo({ trunc_width = 120 })
 
             return MiniStatusline.combine_groups({
-                { hl = mode_hl,strings = { mode:upper() } },
+                { hl = mode_hl, strings = { mode } },
                 { hl = 'MiniStatuslineDevinfo', strings = { git } },
                 { hl = 'MiniStatuslineFilename', strings = { "%t" } },
                 '%=', -- End left alignment
