@@ -12,7 +12,7 @@
 
     autoread = true;
     breakindent = true;
-    clipboard = "unnamedplus";
+    clipboard = "unnamed";
 
     tabstop = 2;
     softtabstop = 2;
