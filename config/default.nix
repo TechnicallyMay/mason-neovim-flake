@@ -11,7 +11,6 @@
     ./lsp.nix
     ./lualine.nix
     ./mini.nix
-    ./noice.nix
     ./oil.nix
     ./settings.nix
     ./substitute.nix
