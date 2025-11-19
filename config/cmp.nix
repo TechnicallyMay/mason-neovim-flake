@@ -2,7 +2,8 @@
   plugins.blink-cmp = {
     enable = true;
     settings = {
-      sources.default = [ "lsp" "path" "snippets" "buffer" ];
+      sources.default = ["lsp" "path" "snippets" "buffer"];
+      signature.enable = true;
     };
   };
 }
