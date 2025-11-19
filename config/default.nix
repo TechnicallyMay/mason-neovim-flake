@@ -1,5 +1,6 @@
 {
   imports = [
+    ./autocmd.nix
     ./cmp.nix
     ./colors.nix
     ./conform.nix

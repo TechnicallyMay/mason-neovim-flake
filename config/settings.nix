@@ -28,6 +28,8 @@
 
     hlsearch = true;
     incsearch = true;
+
+    ignorecase = true;
     smartcase = true;
 
     scrolloff = 8;

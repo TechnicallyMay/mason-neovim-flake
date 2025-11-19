@@ -33,13 +33,13 @@
       surround = {
         enable = true;
         mappings = {
-          add = "gsa";
-          delete = "gsd";
-          find = "gsf";
-          find_left = "gsF";
-          highlight = "gsh";
-          replace = "gsr";
-          update_n_lines = "gsn";
+          add = "ys";
+          delete = "ds";
+          find = "";
+          find_left = "";
+          highlight = "";
+          replace = "cs";
+          update_n_lines = "";
         };
       };
     };

@@ -13,23 +13,23 @@
   extraConfigLua = ''
     require('substitute').setup({
         highlight_substituted_text = {
-        enabled = false
+          enabled = false
         }
-        })
+    })
   '';
   keymaps = [
     {
-      key = "gs";
+      key = "<leader>p";
       action.__raw = "require('substitute').operator";
       "mode" = "n";
-      options.desc = "[G]o [S]ubstitute";
+      options.desc = "[P]ut";
       options.silent = true;
     }
     {
-      key = "gs";
+      key = "<leader>p";
       action.__raw = "require('substitute').visual";
       "mode" = "x";
-      options.desc = "[G]o [S]ubstitute";
+      options.desc = "[P]ut";
       options.silent = true;
     }
   ];
