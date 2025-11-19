@@ -9,6 +9,7 @@
     }
 
     # Buffers
+    ## Navigate
     {
       key = "<C-h>";
       action = "<cmd>wincmd h<CR>";
@@ -33,12 +34,33 @@
       mode = "n";
       options.silent = true;
     }
+
+    ## Resize
     {
-      key = "<C-l>";
-      action = "<cmd>wincmd l<CR>";
+      key = "<Left>";
+      action = "<cmd>vertical resize +6<CR>";
       mode = "n";
       options.silent = true;
     }
+    {
+      key = "<Right>";
+      action = "<cmd>vertical resize -6<CR>";
+      mode = "n";
+      options.silent = true;
+    }
+    {
+      key = "<Up>";
+      action = "<cmd>resize -6<CR>";
+      mode = "n";
+      options.silent = true;
+    }
+    {
+      key = "<Down>";
+      action = "<cmd>resize +6<CR>";
+      mode = "n";
+      options.silent = true;
+    }
+
     {
       key = "<leader>bv";
       action = "<cmd>vsplit<CR>";
@@ -48,7 +70,7 @@
     }
     {
       key = "<leader>bs";
-      action = "<cmd>hsplit<CR>";
+      action = "<cmd>split<CR>";
       mode = "n";
       options.desc = "[B]uffer Horizontal [S]plit";
       options.silent = true;

@@ -1,7 +1,6 @@
 {
   imports = [
     ./autocmd.nix
-    ./bufferline.nix
     ./cmp.nix
     ./colors.nix
     ./conform.nix
@@ -10,7 +9,9 @@
     ./godot.nix
     ./guess-indent.nix
     ./lsp.nix
+    ./lualine.nix
     ./mini.nix
+    ./noice.nix
     ./oil.nix
     ./settings.nix
     ./substitute.nix
