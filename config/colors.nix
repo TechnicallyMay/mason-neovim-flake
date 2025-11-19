@@ -1,7 +1,10 @@
 {
-  # colorschemes.tokyonight.enable = true;
-  colorschemes.nightfox = {
+  colorschemes.tokyonight = {
     enable = true;
-    flavor = "carbonfox";
+    settings.style = "night";
   };
+  # colorschemes.nightfox = {
+  #   enable = true;
+  #   flavor = "carbonfox";
+  # };
 }
