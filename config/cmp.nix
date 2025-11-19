@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       sources.default = ["lsp" "path" "snippets" "buffer"];
-      signature.enable = true;
+      signature.enabled = true;
     };
   };
 }
