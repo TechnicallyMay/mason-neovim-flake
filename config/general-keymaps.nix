@@ -77,6 +77,13 @@
       options.silent = true;
     }
     {
+      key = "<leader>tc";
+      action = "<cmd>tabclose<CR>";
+      mode = "n";
+      options.desc = "[T]ab [C]lose";
+      options.silent = true;
+    }
+    {
       key = "<leader>to";
       action = "<cmd>tabonly<CR>";
       mode = "n";
