@@ -8,6 +8,7 @@
       key = "-";
       mode = "n";
       action = ":Oil<CR>";
+      options.silent = true;
     }
   ];
 }
