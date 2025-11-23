@@ -13,7 +13,7 @@
         gdscript = [
           "gdformat"
         ];
-        csharp = [
+        cs = [
           "csharpier"
         ];
         "_" = [
@@ -35,8 +35,8 @@
           command = lib.getBin pkgs.gdtoolkit_4 + "/bin/gdformat";
         };
 
-        csharp = {
-          command = lib.getExe pkgs.dotnet-sdk + " run csharpier";
+        csharpier = {
+          command = lib.getExe pkgs.csharpier;
         };
       };
       format_on_save = {

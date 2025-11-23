@@ -1,5 +1,4 @@
 {
-  plugins.lspconfig.enable = true;
   plugins.lsp = {
     enable = true;
     inlayHints = true;
@@ -8,7 +7,7 @@
       ts_ls.enable = true;
       lua_ls.enable = true;
       nixd.enable = true;
-      omnisharp.enable = true;
+      csharp_ls.enable = true;
     };
 
     keymaps = {
