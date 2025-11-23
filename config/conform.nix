@@ -9,14 +9,17 @@
       formatters_by_ft = {
         nix = [
           "alejandra"
-          "squeeze_blanks"
-          "trim_whitespace"
-          "trim_newlines"
         ];
         gdscript = [
           "gdformat"
         ];
+        csharp = [
+          "csharpier"
+        ];
         "_" = [
+          "squeeze_blanks"
+          "trim_whitespace"
+          "trim_newlines"
         ];
       };
       formatters = {
@@ -30,6 +33,10 @@
 
         gdformat = {
           command = lib.getBin pkgs.gdtoolkit_4 + "/bin/gdformat";
+        };
+
+        csharp = {
+          command = lib.getExe pkgs.dotnet-sdk + " run csharpier";
         };
       };
       format_on_save = {
