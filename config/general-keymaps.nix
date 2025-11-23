@@ -82,6 +82,13 @@
       options.desc = "[B]uffer [O]nly";
       options.silent = true;
     }
+    {
+      key = "<leader>bc";
+      action = "<C-w>c";
+      mode = "n";
+      options.desc = "[B]uffer [C]lose";
+      options.silent = true;
+    }
 
     # Tabs
     {

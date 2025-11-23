@@ -47,7 +47,7 @@
         };
       };
       diagnostic = {
-        "<leader>d" = {
+        "<leader>ds" = {
           action = "open_float";
           desc = "Line Diagnostics";
         };

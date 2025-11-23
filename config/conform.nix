@@ -10,13 +10,13 @@
         nix = [
           "alejandra"
           "squeeze_blanks"
+          "trim_whitespace"
+          "trim_newlines"
         ];
         gdscript = [
           "gdformat"
         ];
         "_" = [
-          "trim_whitespace"
-          "trim_newlines"
         ];
       };
       formatters = {
