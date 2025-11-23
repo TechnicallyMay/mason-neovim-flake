@@ -1,4 +1,5 @@
 {
+  plugins.roslyn.enable = true;
   plugins.lsp = {
     enable = true;
     inlayHints = true;
@@ -7,7 +8,7 @@
       ts_ls.enable = true;
       lua_ls.enable = true;
       nixd.enable = true;
-      csharp_ls.enable = true;
+      # csharp_ls.enable = true;
     };
 
     keymaps = {
@@ -43,7 +44,11 @@
         };
         "<leader>rn" = {
           action = "rename";
-          desc = "Rename";
+          desc = "[R]efactor Re[n]ame";
+        };
+        "<leader>rr" = {
+          action = "code_action";
+          desc = "[R]efactor show all actions";
         };
       };
       diagnostic = {
