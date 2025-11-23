@@ -36,7 +36,8 @@
         };
 
         csharpier = {
-          command = lib.getExe pkgs.csharpier;
+          command = "dotnet-csharpier";
+          args = ["--write-stdout"];
         };
       };
       format_on_save = {
