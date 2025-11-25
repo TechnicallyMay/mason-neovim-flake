@@ -16,6 +16,9 @@
         cs = [
           "csharpier"
         ];
+        go = [
+          "gofmt"
+        ];
         "_" = [
           "squeeze_blanks"
           "trim_whitespace"
@@ -29,6 +32,10 @@
 
         squeeze_blanks = {
           command = lib.getExe' pkgs.coreutils "cat";
+        };
+
+        gofmt = {
+          command = "gofmt";
         };
 
         gdformat = {
