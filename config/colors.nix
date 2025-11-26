@@ -8,6 +8,7 @@
   #   flavor = "carbonfox";
   # };
   # colorschemes.everforest.enable = true;
+  # colorschemes.bamboo.enable = true;
   extraPlugins = [
     (
       pkgs.vimUtils.buildVimPlugin {
