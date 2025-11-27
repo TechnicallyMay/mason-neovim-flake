@@ -1,7 +1,4 @@
-{
-  plugins.friendly-snippets = {
-    enable = true;
-  };
+{...}: {
   plugins.blink-cmp = {
     enable = true;
     settings = {
@@ -11,6 +8,7 @@
         providers.path.score_offset = -1;
         providers.buffer.score_offset = -10;
       };
+      snippets.preset = "luasnip";
       signature.enabled = true;
     };
   };

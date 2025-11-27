@@ -10,6 +10,7 @@
     ./guess-indent.nix
     ./lsp.nix
     ./lualine.nix
+    ./luasnip.nix
     ./mini.nix
     ./oil.nix
     ./render-markdown.nix
