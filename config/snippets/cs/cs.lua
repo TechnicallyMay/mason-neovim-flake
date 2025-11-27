@@ -28,6 +28,7 @@ local postfix = require("luasnip.extras.postfix").postfix
 
 local function get_csharp_namespace()
 	local cwd = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":h")
+
 	local root_files = vim.fs.find(function(name, _)
 		return name:match('.*.csproj$') or name:match('.*%.sln$')
 	end, { upward = true, path = cwd, type = "file" })
@@ -57,16 +58,6 @@ local function get_csharp_namespace()
 end
 
 local regular_snippets = {
-	-- Method
-	s("m", fmta("<visibility> <returnType> <name>(<arguments>)\n{\n\t<finish>\n}",
-	{
-		visibility = c(1, { t("public"), t("private"), t("internal") }),
-		returnType = i(2, "void"),
-		name = i(3, "NewMethod"),
-		arguments = i(4),
-		finish = i(0),
-	})),
-
 	-- Namespace
 	s("ns", fmta("namespace <namespace>;",
 	{
@@ -104,6 +95,26 @@ local auto_snippets = {
 		condition = i(1),
 		finish = i(0),
 	})),
+
+	-- Class
+	s("class", fmta("<visibility> class <name>\n{\n\t<finish>\n}",
+	{
+		visibility = c(1, { t("public"), t("private"), t("internal") }),
+		name = i(2, "NewClass"),
+		finish = i(0),
+	})),
+
+	-- Method
+	s("meth", fmta("<visibility> <returnType> <name>(<arguments>)\n{\n\t<finish>\n}",
+	{
+		visibility = c(1, { t("public"), t("private"), t("internal") }),
+		returnType = i(2, "void"),
+		name = i(3, "NewMethod"),
+		arguments = i(4),
+		finish = i(0),
+	})),
+
+	-- TODO: 'For' postfix
 
 }
 
