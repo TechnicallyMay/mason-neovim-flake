@@ -6,7 +6,6 @@
     ./gitsigns.nix
     ./godot.nix
     ./guess-indent.nix
-    ./lazyvim.nix
     ./lsp.nix
     ./lualine.nix
     ./luasnip.nix
