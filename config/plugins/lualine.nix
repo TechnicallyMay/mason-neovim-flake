@@ -1,4 +1,5 @@
 {
+  opts.showtabline = 0;
   plugins.lualine = {
     enable = true;
     settings = {

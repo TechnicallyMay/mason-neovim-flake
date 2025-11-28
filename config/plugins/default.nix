@@ -1,0 +1,23 @@
+{
+  imports = [
+    ./cmp.nix
+    ./colors.nix
+    ./conform.nix
+    ./gitsigns.nix
+    ./godot.nix
+    ./guess-indent.nix
+    ./lazyvim.nix
+    ./lsp.nix
+    ./lualine.nix
+    ./luasnip.nix
+    ./mini.nix
+    ./oil.nix
+    ./render-markdown.nix
+    ./smart-splits.nix
+    ./substitute.nix
+    ./telescope.nix
+    ./treesitter-context.nix
+    ./treesitter.nix
+    ./undotree.nix
+  ];
+}

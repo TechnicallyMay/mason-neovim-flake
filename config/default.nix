@@ -1,25 +1,7 @@
 {
   imports = [
-    ./autocmd.nix
-    ./cmp.nix
-    ./colors.nix
-    ./conform.nix
-    ./general-keymaps.nix
-    ./gitsigns.nix
-    ./godot.nix
-    ./guess-indent.nix
-    ./lsp.nix
-    ./lualine.nix
-    ./luasnip.nix
-    ./mini.nix
-    ./oil.nix
-    ./render-markdown.nix
-    ./settings.nix
-    ./smart-splits.nix
-    ./substitute.nix
-    ./telescope.nix
-    ./treesitter.nix
-    ./undotree.nix
-    ./whichkey.nix
+    ./autocmd
+    ./plugins
+    ./settings
   ];
 }

@@ -1,7 +1,7 @@
 {
   plugins.luasnip = {
     enable = true;
-    fromLua = [{paths = ./snippets;}];
+    fromLua = [{paths = ../snippets;}];
     settings = {
       enable_autosnippets = true;
       region_check_events = ["CursorMoved"];
