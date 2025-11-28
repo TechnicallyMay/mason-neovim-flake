@@ -35,32 +35,6 @@
       options.silent = true;
     }
 
-    ## Resize
-    {
-      key = "<Left>";
-      action = "<cmd>vertical resize +6<CR>";
-      mode = "n";
-      options.silent = true;
-    }
-    {
-      key = "<Right>";
-      action = "<cmd>vertical resize -6<CR>";
-      mode = "n";
-      options.silent = true;
-    }
-    {
-      key = "<Up>";
-      action = "<cmd>resize -6<CR>";
-      mode = "n";
-      options.silent = true;
-    }
-    {
-      key = "<Down>";
-      action = "<cmd>resize +6<CR>";
-      mode = "n";
-      options.silent = true;
-    }
-
     {
       key = "<leader>bv";
       action = "<cmd>vsplit<CR>";

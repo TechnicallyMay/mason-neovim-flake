@@ -15,6 +15,7 @@
     ./oil.nix
     ./render-markdown.nix
     ./settings.nix
+    ./smart-splits.nix
     ./substitute.nix
     ./telescope.nix
     ./treesitter.nix
