@@ -1,7 +1,12 @@
 {pkgs, ...}: {
+  opts.foldmethod = "expr";
+  opts.foldexpr = "v:lua.vim.treesitter.foldexpr()";
+  # Don't have folds turned on when starting nvim
+  opts.foldenable = false;
   plugins.web-devicons.enable = true;
   plugins.treesitter = {
     enable = true;
+    folding = true;
     settings = {
       highlight.enable = true;
     };
@@ -34,40 +39,33 @@
 
   plugins.treesitter-textobjects = {
     enable = true;
-    select = {
-      enable = true;
-      keymaps = {
-        ab = "@block.outer";
-        ib = "@block.inner";
-
-        ac = "@call.outer";
-        ic = "@call.inner";
-
-        af = "@function.outer";
-        "if" = "@function.inner";
-      };
-    };
-
-    move = {
-      enable = true;
-      setJumps = true;
-      gotoNextStart = {
-        "]]" = "@function.outer";
-        "]c" = "@class.outer";
+    settings = {
+      move = {
+        enable = true;
+        set_jumps = true;
+        goto_next_start = {
+          "]]" = "@function.outer";
+          "]c" = "@class.outer";
+        };
+        goto_previous_start = {
+          "[[" = "@function.outer";
+          "[c" = "@class.outer";
+        };
       };
 
-      gotoPreviousStart = {
-        "[[" = "@function.outer";
-        "[c" = "@class.outer";
+      select = {
+        enable = true;
+        keymaps = {
+          ab = "@block.outer";
+          ib = "@block.inner";
+
+          ac = "@call.outer";
+          ic = "@call.inner";
+
+          af = "@function.outer";
+          "if" = "@function.inner";
+        };
       };
-      # gotoNextEnd = {
-      #   "]M" = "@function.outer";
-      #   "][" = "@class.outer";
-      # };
-      # gotoPreviousEnd = {
-      #   "[m" = "@function.outer";
-      #   "[]" = "@class.outer";
-      # };
     };
   };
 }

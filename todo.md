@@ -1,9 +1,9 @@
 # Mason's Neovim Config
 ## TODO
+- [ ] Notes workflow & keybinds
 - [ ] Telescope for go to references
 - [ ] Telescope for code actions
-- [ ] Notes workflow & keybinds
-- [ ] Fix nix warnings
+- [x] Fix nix warnings
 
 ### Snippets
 - [ ] Csharp property with getter and setter
