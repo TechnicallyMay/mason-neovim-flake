@@ -2,7 +2,15 @@
   plugins.mini = {
     enable = true;
     modules = {
-      ai.enable = true;
+      ai = {
+        enable = true;
+
+        custom_textobjects = {
+          # Disable "function call" in favor of nvim-treesitter-textobjects
+          f = null;
+        };
+      };
+
       move.enable = true;
       splitjoin.enable = true;
       cursorword.enable = true;
