@@ -10,6 +10,9 @@
 - [ ] Csharp property with getter and setter
   - Don't conflict with pr and ppr
 - [ ] Debug prints
+- [ ] If inner if statment is 1 line, remove braces
+- [ ] Class name default to file name
+- [ ] Namespace (and probably others) snippets to put cursor on next line
 ##### Godot
 - [ ] Debug prints
 - [ ] Emit Signal
