@@ -90,7 +90,7 @@ local auto_snippets = {
 	}),
 
 	-- If
-	s("if", fmta("if (<condition>)\n{\n\t<finish>\n}",
+	s("if ", fmta("if (<condition>)\n{\n\t<finish>\n}",
 	{
 		condition = i(1),
 		finish = i(0),
@@ -98,6 +98,14 @@ local auto_snippets = {
 
 	-- Class
 	s("class", fmta("<visibility> class <name>\n{\n\t<finish>\n}",
+	{
+		visibility = c(1, { t("public"), t("private"), t("internal") }),
+		name = i(2, "NewClass"),
+		finish = i(0),
+	})),
+
+	-- Partial Class
+	s("pclass", fmta("<visibility> partial class <name>\n{\n\t<finish>\n}",
 	{
 		visibility = c(1, { t("public"), t("private"), t("internal") }),
 		name = i(2, "NewClass"),
