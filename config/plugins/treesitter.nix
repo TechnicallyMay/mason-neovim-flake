@@ -15,6 +15,7 @@
       bash
       c_sharp
       comment
+      go
       json
       lua
       make

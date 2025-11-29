@@ -1,8 +1,8 @@
 {pkgs, ...}: {
-  # colorschemes.tokyonight = {
-  #   enable = true;
-  #   settings.style = "night";
-  # };
+  colorschemes.tokyonight = {
+    enable = true;
+    settings.style = "night";
+  };
   # colorschemes.nightfox = {
   #   enable = true;
   #   flavor = "carbonfox";
@@ -23,7 +23,7 @@
     )
   ];
 
-  extraConfigLua = ''
-    vim.cmd("colorscheme christmas")
-  '';
+  # extraConfigLua = ''
+  #   vim.cmd("colorscheme christmas")
+  # '';
 }
