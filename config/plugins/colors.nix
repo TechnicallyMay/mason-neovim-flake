@@ -23,7 +23,7 @@
     )
   ];
 
-  # extraConfigLua = ''
-  #   vim.cmd("colorscheme christmas")
-  # '';
+  extraConfigLua = ''
+    vim.cmd("colorscheme christmas")
+  '';
 }

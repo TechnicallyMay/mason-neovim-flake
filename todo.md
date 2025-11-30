@@ -5,6 +5,7 @@
 - [ ] Telescope for code actions
 - [x] Fix nix warnings
 - [ ] Keybind for wordwrap
+- [ ] Markdown enable indent
 
 ### Snippets
 #### Csharp
@@ -19,13 +20,3 @@
 - [ ] Emit Signal
   - [ ] Extra credit - choice of signals
   - [ ] Super extra credit - prepopulate the signal params (lol like I'll ever do this)
-
-```cs
-Console.WriteLine("hello");
-```
-
-```go
-type Whatev struct {
-    test int32
-}
-```
