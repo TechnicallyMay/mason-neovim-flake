@@ -5,6 +5,7 @@
     inlayHints = true;
 
     servers = {
+      angularls.enable = true;
       ts_ls.enable = true;
       lua_ls.enable = true;
       nixd.enable = true;
