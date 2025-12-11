@@ -19,6 +19,11 @@
         go = [
           "gofmt"
         ];
+
+        typescript = [
+          "prettier"
+        ];
+
         "_" = [
           "squeeze_blanks"
           "trim_whitespace"
