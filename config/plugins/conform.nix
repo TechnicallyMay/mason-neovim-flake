@@ -40,7 +40,7 @@
         };
 
         gofmt = {
-          command = "gofmt";
+          command = lib.getExe' pkgs.go "gofmt";
         };
 
         gdformat = {

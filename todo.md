@@ -6,6 +6,7 @@
 - [x] Fix nix warnings
 - [ ] Keybind for wordwrap
 - [ ] Markdown enable indent
+- [ ] Unbind Oil Ctrl+<hjkl> buttons so split navigation still works
 
 ### Snippets
 #### Csharp
