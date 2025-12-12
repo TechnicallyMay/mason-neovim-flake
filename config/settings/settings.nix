@@ -39,5 +39,7 @@
 
     splitright = true;
     splitbelow = true;
+
+    statusline = "%f";
   };
 }

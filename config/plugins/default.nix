@@ -7,7 +7,6 @@
     ./godot.nix
     ./guess-indent.nix
     ./lsp.nix
-    ./lualine.nix
     ./luasnip.nix
     ./mini.nix
     ./oil.nix
