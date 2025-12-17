@@ -3,20 +3,13 @@
   #   enable = true;
   #   settings.style = "night";
   # };
-  # colorschemes.nightfox = {
-  #   enable = true;
-  #   flavor = "carbonfox";
-  #
-  # };
-  # colorschemes.kanagawa-paper = {
-  #   enable = true;
-  # };
+  # colorschemes.nightfox.enable = true;
+  # colorschemes.kanagawa-paper.enable = true;
   # colorschemes.everforest.enable = true;
   # colorschemes.bamboo.enable = true;
   # colorschemes.gruvbox.enable = true;
   # colorschemes.vscode.enable = true;
   colorschemes.rose-pine.enable = true;
-  # colorschemes.nord.enable = true;
   extraPlugins = [
     (
       pkgs.vimUtils.buildVimPlugin {
@@ -76,7 +69,7 @@
   ];
 
   extraConfigLua = ''
-    -- vim.cmd("colorscheme no-clown-fiesta")
+    vim.cmd("colorscheme no-clown-fiesta")
     -- vim.cmd("colorscheme sonokai")
     -- vim.cmd("colorscheme christmas")
     -- vim.cmd("colorscheme vscode")
