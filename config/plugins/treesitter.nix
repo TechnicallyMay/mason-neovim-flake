@@ -12,10 +12,13 @@
     };
 
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+      angular
       bash
       c_sharp
+      css
       comment
       go
+      html
       json
       lua
       make
@@ -25,6 +28,7 @@
       regex
       sql
       toml
+      typescript
       vim
       vimdoc
       xml

@@ -14,7 +14,7 @@
   # colorschemes.everforest.enable = true;
   # colorschemes.bamboo.enable = true;
   # colorschemes.gruvbox.enable = true;
-  colorschemes.vscode.enable = true;
+  # colorschemes.vscode.enable = true;
   colorschemes.rose-pine.enable = true;
   # colorschemes.nord.enable = true;
   extraPlugins = [
@@ -76,7 +76,7 @@
   ];
 
   extraConfigLua = ''
-    vim.cmd("colorscheme no-clown-fiesta")
+    -- vim.cmd("colorscheme no-clown-fiesta")
     -- vim.cmd("colorscheme sonokai")
     -- vim.cmd("colorscheme christmas")
     -- vim.cmd("colorscheme vscode")
