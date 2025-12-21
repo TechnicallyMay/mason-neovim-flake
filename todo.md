@@ -1,12 +1,6 @@
 # Mason's Neovim Config
 ## TODO
 - [ ] Notes workflow & keybinds
-- [ ] Telescope for go to references
-- [ ] Telescope for code actions
-- [x] Fix nix warnings
-- [ ] Keybind for wordwrap
-- [ ] Markdown enable indent
-- [ ] Unbind Oil Ctrl+<hjkl> buttons so split navigation still works
 
 ### Snippets
 #### Csharp
@@ -21,3 +15,11 @@
 - [ ] Emit Signal
   - [ ] Extra credit - choice of signals
   - [ ] Super extra credit - prepopulate the signal params (lol like I'll ever do this)
+
+## Archive
+- [x] Telescope for go to references
+- [x] Telescope for code actions
+- [x] Fix nix warnings
+- [x] Keybind for wordwrap
+- [x] Markdown enable indent
+- [x] Unbind Oil Ctrl+<hjkl> buttons so split navigation still works

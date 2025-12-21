@@ -107,5 +107,12 @@
       options.desc = "[T]ab [N]ext";
       options.silent = true;
     }
+    {
+      key = "<leader>ww";
+      action = "<cmd>set wrap!<CR>";
+      mode = "n";
+      options.desc = "Toggle [W]ord [W]rap";
+      options.silent = true;
+    }
   ];
 }

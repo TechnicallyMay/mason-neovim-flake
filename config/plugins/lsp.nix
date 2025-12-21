@@ -23,10 +23,10 @@
           action = "type_definition";
           desc = "[G]oTo [T]ype Definition";
         };
-        gr = {
-          action = "references";
-          desc = "[G]oTo [R]eferences";
-        };
+        # gr = {
+        #   action = "references";
+        #   desc = "[G]oTo [R]eferences";
+        # };
         gi = {
           action = "implementation";
           desc = "[G]oTo [I]mplementation";

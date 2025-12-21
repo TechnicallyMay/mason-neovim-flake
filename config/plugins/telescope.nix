@@ -8,6 +8,7 @@
         ];
       };
     };
+    extensions.ui-select.enable = true;
     keymaps = {
       "<leader>sg" = {
         action = "live_grep";
@@ -50,6 +51,9 @@
       };
       "<leader>s'" = {
         action = "marks";
+      };
+      "gr" = {
+        action = "lsp_references";
       };
       "<C-n>" = {
         action = "move_selection_next";
