@@ -64,10 +64,8 @@ local regular_snippets = {
 		namespace = f(function()
 			return get_csharp_namespace()
 		end, {})
-	}));
-}
+	})),
 
-local auto_snippets = {
 	-- Doc comment
 	s("///", fmt("/// <summary>\n///\t{finish}\n/// </summary>",
 	{
@@ -123,7 +121,8 @@ local auto_snippets = {
 	})),
 
 	-- TODO: 'For' postfix
-
 }
+
+local auto_snippets = { };
 
 return regular_snippets, auto_snippets
