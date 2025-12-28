@@ -1,27 +1,6 @@
 {pkgs, ...}: {
-  # colorschemes.tokyonight = {
-  #   enable = true;
-  #   settings.style = "night";
-  # };
-  # colorschemes.nightfox.enable = true;
-  # colorschemes.kanagawa-paper.enable = true;
-  # colorschemes.everforest.enable = true;
-  # colorschemes.bamboo.enable = true;
-  # colorschemes.gruvbox.enable = true;
-  # colorschemes.vscode.enable = true;
-  colorschemes.rose-pine.enable = true;
+  colorschemes.vague.enable = true;
   extraPlugins = [
-    (
-      pkgs.vimUtils.buildVimPlugin {
-        name = "christmas.nvim";
-        src = pkgs.fetchFromGitHub {
-          owner = "ChaseRensberger";
-          repo = "christmas.nvim";
-          rev = "3618d70";
-          hash = "sha256-jKv0IHai9JOsfD74AZefC5TpMsf2cfNOz0OOpRbSALw=";
-        };
-      }
-    )
     (
       pkgs.vimUtils.buildVimPlugin {
         name = "no-clown-fiesta";
@@ -55,23 +34,12 @@
         };
       }
     )
-    (
-      pkgs.vimUtils.buildVimPlugin {
-        name = "monokai-pro";
-        src = pkgs.fetchFromGitHub {
-          owner = "loctvl842";
-          repo = "monokai-pro.nvim";
-          rev = "1ac671f";
-          hash = "sha256-ZyBmU7FSEVXJGPjPKSJCMo3BJU++yv8r1G0K0t/cPEI=";
-        };
-      }
-    )
   ];
 
   extraConfigLua = ''
-    vim.cmd("colorscheme no-clown-fiesta")
+    -- vim.cmd("colorscheme shadow")
+    -- vim.cmd("colorscheme no-clown-fiesta")
     -- vim.cmd("colorscheme sonokai")
-    -- vim.cmd("colorscheme christmas")
     -- vim.cmd("colorscheme vscode")
   '';
 }
