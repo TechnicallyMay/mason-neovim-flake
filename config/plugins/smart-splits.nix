@@ -11,7 +11,7 @@
     # Resizing windows with Alt+hjkl
     {
       mode = "n";
-      key = "<Left>";
+      key = "<M-h>";
       action.__raw = "require('smart-splits').resize_left";
       options = {
         silent = true;
@@ -20,7 +20,7 @@
     }
     {
       mode = "n";
-      key = "<Down>";
+      key = "<M-j>";
       action.__raw = "require('smart-splits').resize_down";
       options = {
         silent = true;
@@ -29,7 +29,7 @@
     }
     {
       mode = "n";
-      key = "<Up>";
+      key = "<M-k>";
       action.__raw = "require('smart-splits').resize_up";
       options = {
         silent = true;
@@ -38,7 +38,7 @@
     }
     {
       mode = "n";
-      key = "<Right>";
+      key = "<M-l>";
       action.__raw = "require('smart-splits').resize_right";
       options = {
         silent = true;

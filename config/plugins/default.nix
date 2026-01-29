@@ -19,5 +19,6 @@
     ./treesitter-context.nix
     ./treesitter.nix
     ./undotree.nix
+    ./whichkey.nix
   ];
 }
