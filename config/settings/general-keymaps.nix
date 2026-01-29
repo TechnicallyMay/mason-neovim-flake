@@ -64,49 +64,6 @@
       options.silent = true;
     }
 
-    # Tabs
-    {
-      key = "<leader>tn";
-      action = "<cmd>tabnew<CR>";
-      mode = "n";
-      options.desc = "[T]ab [N]ew";
-      options.silent = true;
-    }
-    {
-      key = "<leader>tN";
-      action = "<cmd>tabnew %<CR>";
-      mode = "n";
-      options.desc = "[T]ab [N]ew (with current file)";
-      options.silent = true;
-    }
-    {
-      key = "<leader>tc";
-      action = "<cmd>tabclose<CR>";
-      mode = "n";
-      options.desc = "[T]ab [C]lose";
-      options.silent = true;
-    }
-    {
-      key = "<leader>to";
-      action = "<cmd>tabonly<CR>";
-      mode = "n";
-      options.desc = "[T]ab [O]nly";
-      options.silent = true;
-    }
-    {
-      key = "[t";
-      action = "<cmd>tabprevious<CR>";
-      mode = "n";
-      options.desc = "[T]ab [P]revious";
-      options.silent = true;
-    }
-    {
-      key = "]t";
-      action = "<cmd>tabnext<CR>";
-      mode = "n";
-      options.desc = "[T]ab [N]ext";
-      options.silent = true;
-    }
     {
       key = "<leader>ww";
       action = "<cmd>set wrap!<CR>";
