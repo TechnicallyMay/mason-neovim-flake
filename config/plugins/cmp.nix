@@ -10,7 +10,6 @@
       };
       snippets.preset = "luasnip";
       signature.enabled = true;
-      view.docs.auto_open = true;
     };
   };
 }
