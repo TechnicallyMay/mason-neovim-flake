@@ -28,7 +28,7 @@ in {
     local dotnet = require("easy-dotnet")
     dotnet.setup({
       test_runner = {
-        viewmode = "split"
+        viewmode = "vsplit",
         icons = {
           passed = "",
           skipped = "",
@@ -42,19 +42,21 @@ in {
           package = "",
         },
         mappings = {
-          run_all = { lhs = "<leader>tR", desc = "[T]est [R]un All" },
-          run = { lhs = "<leader>tr", desc = "[T]est [R]un" },
 
           debug_test = { lhs = "<leader>td", desc = "[T]est [D]ebug" },
+          debug_test_from_buffer = { lhs = "<leader>td", desc = "[T]est [D]ebug" },
 
-          run_test_from_buffer = { lhs = "<leader>td", desc = "[T]est [D]ebug" },
-          run_all_tests_from_buffer = { lhs = "<leader>tD", desc = "[T]est [D]ebug All" },
+          run = { lhs = "<leader>tr", desc = "[T]est [R]un" },
+          run_test_from_buffer = { lhs = "<leader>tr", desc = "[T]est [R]un" },
+
+          run_all = { lhs = "<leader>tR", desc = "[T]est [R]un All" },
+          run_all_tests_from_buffer = { lhs = "<leader>tR", desc = "[T]est [R]un All" },
 
           peek_stack_trace_from_buffer = { lhs = "<leader>p", desc = "peek stack trace from buffer" },
           filter_failed_tests = { lhs = "<leader>fe", desc = "filter failed tests" },
-          go_to_file = { lhs = "g", desc = "go to file" },
+          go_to_file = { lhs = "gf", desc = "go to file" },
           peek_stacktrace = { lhs = "<leader>p", desc = "peek stacktrace of failed test" },
-          expand = { lhs = "o", desc = "expand" },
+          expand = { lhs = "<CR>", desc = "expand" },
           expand_node = { lhs = "E", desc = "expand node" },
           expand_all = { lhs = "-", desc = "expand all" },
           collapse_all = { lhs = "W", desc = "collapse all" },
@@ -62,6 +64,18 @@ in {
           refresh_testrunner = { lhs = "<C-r>", desc = "refresh testrunner" }
         }
       },
-    });
+    })
   '';
+
+  keymaps = [
+    {
+      mode = ["n"];
+      key = "<leader>tt";
+      action = "<cmd>Dotnet testrunner<CR>";
+      options = {
+        desc = "[T]est Runner";
+        noremap = true;
+      };
+    }
+  ];
 }
