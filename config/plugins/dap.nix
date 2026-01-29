@@ -1,5 +1,25 @@
 {
-  plugins.dap.enable = true;
+  lib,
+  pkgs,
+  ...
+}: {
+  plugins.dap = {
+    enable = true;
+    adapters = {
+      executables = {
+        coreclr = {
+          command = lib.getExe pkgs.netcoredbg;
+          args = ["--interpreter=vscode"];
+        };
+
+        netcoredbg = {
+          command = lib.getExe pkgs.netcoredbg;
+          args = ["--interpreter=vscode"];
+        };
+      };
+    };
+  };
+
   plugins.dap-ui.enable = true;
 
   extraConfigLua = ''
