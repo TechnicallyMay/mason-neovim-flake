@@ -1,5 +1,5 @@
 {
-  plugins.roslyn.enable = true;
+  # plugins.roslyn.enable = true;
   plugins.lsp = {
     enable = true;
     inlayHints = true;
