@@ -41,5 +41,6 @@
     splitbelow = true;
 
     statusline = "%f";
+    termguicolors = true;
   };
 }

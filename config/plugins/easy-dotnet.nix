@@ -29,6 +29,7 @@ in {
     dotnet.setup({
       test_runner = {
         viewmode = "vsplit",
+        noBuild = false,
         icons = {
           passed = "",
           skipped = "",
