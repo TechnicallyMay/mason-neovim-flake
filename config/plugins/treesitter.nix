@@ -19,6 +19,7 @@
       comment
       go
       html
+      java
       json
       lua
       make

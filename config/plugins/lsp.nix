@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   # plugins.roslyn.enable = true;
   plugins.lsp = {
     enable = true;
@@ -10,6 +10,13 @@
       lua_ls.enable = true;
       nixd.enable = true;
       gopls.enable = true;
+      jdtls = {
+        enable = true;
+        cmd = [
+          "${pkgs.jdt-language-server}/bin/jdtls"
+          "--jvm-arg=-javaagent:${pkgs.lombok}/share/java/lombok.jar"
+        ];
+      };
     };
 
     keymaps = {
