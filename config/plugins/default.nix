@@ -4,7 +4,6 @@
     ./colors.nix
     ./conform.nix
     ./dap.nix
-    ./easy-dotnet.nix
     ./gitsigns.nix
     ./godot.nix
     ./guess-indent.nix
