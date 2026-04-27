@@ -3,7 +3,8 @@
   extraPlugins = [
     (
       pkgs.vimUtils.buildVimPlugin {
-        name = "no-clown-fiesta";
+        pname = "no-clown-fiesta";
+        version = "unstable";
         src = pkgs.fetchFromGitHub {
           owner = "aktersnurra";
           repo = "no-clown-fiesta.nvim";
@@ -14,7 +15,8 @@
     )
     (
       pkgs.vimUtils.buildVimPlugin {
-        name = "shadow";
+        pname = "shadow";
+        version = "unstable";
         src = pkgs.fetchFromGitHub {
           owner = "rjshkhr";
           repo = "shadow.nvim";
@@ -25,7 +27,8 @@
     )
     (
       pkgs.vimUtils.buildVimPlugin {
-        name = "sonokai";
+        pname = "sonokai";
+        version = "unstable";
         src = pkgs.fetchFromGitHub {
           owner = "sainnhe";
           repo = "sonokai";

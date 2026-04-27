@@ -20,6 +20,10 @@
           "gofmt"
         ];
 
+        java = [
+          "google-java-format"
+        ];
+
         typescript = [
           "prettier"
         ];
@@ -50,6 +54,10 @@
         csharpier = {
           command = "dotnet-csharpier";
           args = ["--write-stdout"];
+        };
+
+        google-java-format = {
+          command = lib.getExe pkgs.google-java-format;
         };
       };
       format_on_save = {

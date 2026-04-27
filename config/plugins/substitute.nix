@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   extraPlugins = [
     (pkgs.vimUtils.buildVimPlugin {
-      name = "substitute.nvim";
+      pname = "substitute.nvim";
+      version = "unstable";
       src = pkgs.fetchFromGitHub {
         owner = "gbprod";
         repo = "substitute.nvim";
