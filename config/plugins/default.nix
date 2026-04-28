@@ -10,6 +10,7 @@
     ./lsp.nix
     ./luasnip.nix
     ./mini.nix
+    ./neotest.nix
     ./oil.nix
     ./render-markdown.nix
     ./smart-splits.nix
