@@ -7,6 +7,12 @@
         discovery_root = "solution";
       };
     };
+    adapters.golang = {
+      enable = true;
+      settings = {
+        recursive_run = true;
+      };
+    };
   };
 
   keymaps = [
