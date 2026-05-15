@@ -46,65 +46,209 @@
     };
   };
 
-  plugins.treesitter-textobjects = {
-    enable = true;
-    settings = {
-      lsp_interop.enable = true;
-      move = {
-        enable = true;
-        set_jumps = false;
+  plugins.treesitter-textobjects.enable = true;
 
-        gotoNextStart = {
-          "]m" = "@function.outer";
-          "]c" = {
-            query = "@class.outer";
-            desc = "next class start";
-          };
+  keymaps = [
+    # Repeat movement with ; and ,
+    {
+      mode = ["n" "x" "o"];
+      key = ";";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.repeatable_move").repeat_last_move_next()
+        end
+      '';
+      options.desc = "Repeat last move next";
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = ",";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.repeatable_move").repeat_last_move_previous()
+        end
+      '';
+      options.desc = "Repeat last move previous";
+    }
 
-          # you can use regex matching (i.e. lua pattern) and/or pass a list in a "query" key to group multiple queries.
-          "]o" = "@loop.*";
-          # "]o" = { query = { "@loop.inner", "@loop.outer" } ;
+    # Move - goto next start
+    {
+      mode = ["n" "x" "o"];
+      key = "]m";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.move").goto_next_start("@function.outer", "textobjects")
+        end
+      '';
+      options.desc = "Next function start";
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = "]c";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.move").goto_next_start("@class.outer", "textobjects")
+        end
+      '';
+      options.desc = "Next class start";
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = "]o";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.move").goto_next_start("@loop.*", "textobjects")
+        end
+      '';
+      options.desc = "Next loop start";
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = "]s";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.move").goto_next_start("@local.scope", "locals")
+        end
+      '';
+      options.desc = "Next scope";
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = "]z";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.move").goto_next_start("@fold", "folds")
+        end
+      '';
+      options.desc = "Next fold";
+    }
 
-          # You can pass a query group to use query from `queries/<lang>/<queryGroup>.scm file in your runtime path.
-          # Below example nvim-treesitter's `locals.scm` and `folds.scm`. They also provide highlights.scm and indent.scm.
-          "]s" = {
-            query = "@local.scope";
-            queryGroup = "locals";
-            desc = "Next scope";
-          };
-          "]z" = {
-            query = "@fold";
-            queryGroup = "folds";
-            desc = "Next fold";
-          };
-        };
-        gotoNextEnd = {
-          "]M" = "@function.outer";
-          "][" = "@class.outer";
-        };
-        gotoPreviousStart = {
-          "[m" = "@function.outer";
-          "[[" = "@class.outer";
-        };
-        gotoPreviousEnd = {
-          "[m" = "@function.outer";
-          "[]" = "@class.outer";
-        };
-      };
+    # Move - goto next end
+    {
+      mode = ["n" "x" "o"];
+      key = "]M";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.move").goto_next_end("@function.outer", "textobjects")
+        end
+      '';
+      options.desc = "Next function end";
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = "][";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.move").goto_next_end("@class.outer", "textobjects")
+        end
+      '';
+      options.desc = "Next class end";
+    }
 
-      select = {
-        enable = true;
-        keymaps = {
-          "ab" = "@block.outer";
-          "ib" = "@block.inner";
+    # Move - goto previous start
+    {
+      mode = ["n" "x" "o"];
+      key = "[m";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.move").goto_previous_start("@function.outer", "textobjects")
+        end
+      '';
+      options.desc = "Previous function start";
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = "[[";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.move").goto_previous_start("@class.outer", "textobjects")
+        end
+      '';
+      options.desc = "Previous class start";
+    }
 
-          "ac" = "@call.outer";
-          "ic" = "@call.inner";
+    # Move - goto previous end
+    {
+      mode = ["n" "x" "o"];
+      key = "[M";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.move").goto_previous_end("@function.outer", "textobjects")
+        end
+      '';
+      options.desc = "Previous function end";
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = "[]";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.move").goto_previous_end("@class.outer", "textobjects")
+        end
+      '';
+      options.desc = "Previous class end";
+    }
 
-          "af" = "@function.outer";
-          "if" = "@function.inner";
-        };
-      };
-    };
-  };
+    # Select textobjects
+    {
+      mode = ["x" "o"];
+      key = "ab";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.select").select_textobject("@block.outer", "textobjects")
+        end
+      '';
+      options.desc = "Select outer block";
+    }
+    {
+      mode = ["x" "o"];
+      key = "ib";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.select").select_textobject("@block.inner", "textobjects")
+        end
+      '';
+      options.desc = "Select inner block";
+    }
+    {
+      mode = ["x" "o"];
+      key = "ac";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.select").select_textobject("@call.outer", "textobjects")
+        end
+      '';
+      options.desc = "Select outer call";
+    }
+    {
+      mode = ["x" "o"];
+      key = "ic";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.select").select_textobject("@call.inner", "textobjects")
+        end
+      '';
+      options.desc = "Select inner call";
+    }
+    {
+      mode = ["x" "o"];
+      key = "af";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.select").select_textobject("@function.outer", "textobjects")
+        end
+      '';
+      options.desc = "Select outer function";
+    }
+    {
+      mode = ["x" "o"];
+      key = "if";
+      action.__raw = ''
+        function()
+          require("nvim-treesitter-textobjects.select").select_textobject("@function.inner", "textobjects")
+        end
+      '';
+      options.desc = "Select inner function";
+    }
+  ];
 }
