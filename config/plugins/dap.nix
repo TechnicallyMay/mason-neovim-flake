@@ -31,6 +31,46 @@
           args = ["--interpreter=vscode"];
         };
       };
+      servers = {
+        delve = {
+          host = "127.0.0.1";
+          port = "\${port}";
+          executable = {
+            command = lib.getExe pkgs.delve;
+            args = ["dap" "-l" "127.0.0.1:\${port}"];
+          };
+        };
+      };
+    };
+    configurations = {
+      go = [
+        {
+          type = "delve";
+          name = "Debug";
+          request = "launch";
+          program = "\${file}";
+        }
+        {
+          type = "delve";
+          name = "Debug Package";
+          request = "launch";
+          program = "\${fileDirname}";
+        }
+        {
+          type = "delve";
+          name = "Debug test";
+          request = "launch";
+          mode = "test";
+          program = "\${file}";
+        }
+        {
+          type = "delve";
+          name = "Debug test (package)";
+          request = "launch";
+          mode = "test";
+          program = "\${fileDirname}";
+        }
+      ];
     };
   };
 
