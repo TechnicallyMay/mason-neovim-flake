@@ -4,6 +4,7 @@
   # Don't have folds turned on when starting nvim
   opts.foldenable = false;
   plugins.web-devicons.enable = true;
+
   plugins.treesitter = {
     enable = true;
     folding.enable = true;
@@ -48,29 +49,59 @@
   plugins.treesitter-textobjects = {
     enable = true;
     settings = {
+      lsp_interop.enable = true;
       move = {
         enable = true;
-        set_jumps = true;
-        goto_next_start = {
-          "]]" = "@function.outer";
-          "]c" = "@class.outer";
+        set_jumps = false;
+
+        gotoNextStart = {
+          "]m" = "@function.outer";
+          "]c" = {
+            query = "@class.outer";
+            desc = "next class start";
+          };
+
+          # you can use regex matching (i.e. lua pattern) and/or pass a list in a "query" key to group multiple queries.
+          "]o" = "@loop.*";
+          # "]o" = { query = { "@loop.inner", "@loop.outer" } ;
+
+          # You can pass a query group to use query from `queries/<lang>/<queryGroup>.scm file in your runtime path.
+          # Below example nvim-treesitter's `locals.scm` and `folds.scm`. They also provide highlights.scm and indent.scm.
+          "]s" = {
+            query = "@local.scope";
+            queryGroup = "locals";
+            desc = "Next scope";
+          };
+          "]z" = {
+            query = "@fold";
+            queryGroup = "folds";
+            desc = "Next fold";
+          };
         };
-        goto_previous_start = {
-          "[[" = "@function.outer";
-          "[c" = "@class.outer";
+        gotoNextEnd = {
+          "]M" = "@function.outer";
+          "][" = "@class.outer";
+        };
+        gotoPreviousStart = {
+          "[m" = "@function.outer";
+          "[[" = "@class.outer";
+        };
+        gotoPreviousEnd = {
+          "[m" = "@function.outer";
+          "[]" = "@class.outer";
         };
       };
 
       select = {
         enable = true;
         keymaps = {
-          ab = "@block.outer";
-          ib = "@block.inner";
+          "ab" = "@block.outer";
+          "ib" = "@block.inner";
 
-          ac = "@call.outer";
-          ic = "@call.inner";
+          "ac" = "@call.outer";
+          "ic" = "@call.inner";
 
-          af = "@function.outer";
+          "af" = "@function.outer";
           "if" = "@function.inner";
         };
       };

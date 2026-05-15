@@ -7,7 +7,8 @@
 
         custom_textobjects = {
           # Disable "function call" in favor of nvim-treesitter-textobjects
-          f = null;
+          f = false;
+          F = false;
         };
       };
 
