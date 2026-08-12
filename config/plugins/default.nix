@@ -8,6 +8,7 @@
     ./godot.nix
     ./guess-indent.nix
     ./lsp.nix
+    ./roslyn.nix
     ./luasnip.nix
     ./mini.nix
     ./neotest.nix
