@@ -1,5 +1,6 @@
 {pkgs, ...}: {
-  colorschemes.vague.enable = true;
+  # colorschemes.vague.enable = true;
+  colorschemes.onedark.enable = true;
   extraPlugins = [
     (
       pkgs.vimUtils.buildVimPlugin {
