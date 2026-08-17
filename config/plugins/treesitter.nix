@@ -50,6 +50,31 @@
 
   keymaps = [
     # Repeat movement with ; and ,
+    # f/F/t/T are wrapped so they register with repeatable_move; behavior is identical to native vim
+    {
+      mode = ["n" "x" "o"];
+      key = "f";
+      action.__raw = "require('nvim-treesitter-textobjects.repeatable_move').builtin_f_expr";
+      options.expr = true;
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = "F";
+      action.__raw = "require('nvim-treesitter-textobjects.repeatable_move').builtin_F_expr";
+      options.expr = true;
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = "t";
+      action.__raw = "require('nvim-treesitter-textobjects.repeatable_move').builtin_t_expr";
+      options.expr = true;
+    }
+    {
+      mode = ["n" "x" "o"];
+      key = "T";
+      action.__raw = "require('nvim-treesitter-textobjects.repeatable_move').builtin_T_expr";
+      options.expr = true;
+    }
     {
       mode = ["n" "x" "o"];
       key = ";";

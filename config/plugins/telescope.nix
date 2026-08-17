@@ -16,9 +16,6 @@
       "<leader>sF" = {
         action = "git_files";
       };
-      "<leader>sb" = {
-        action = "buffers";
-      };
       "<leader>sf" = {
         action = "find_files";
       };
@@ -28,7 +25,7 @@
       "<leader>sw" = {
         action = "grep_string";
       };
-      "<leader>sR" = {
+      "<leader>so" = {
         action = "oldfiles";
       };
       "<leader>sq" = {
