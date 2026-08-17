@@ -1,9 +1,4 @@
 {pkgs, ...}: {
-  lsp.servers.gdscript = {
-    enable = true;
-    package = null;
-  };
-
   plugins.treesitter.grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
     gdscript
     godot_resource
@@ -18,8 +13,10 @@
       ];
       callback.__raw = ''
         function()
+          print("Checking for godot project.")
           local cwd = vim.fn.getcwd()
           if not vim.uv.fs_stat(cwd .. "/project.godot") then
+            print("No godot project found.")
             return
           end
 

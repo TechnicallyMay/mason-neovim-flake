@@ -1,21 +1,13 @@
 {
   imports = [
-    ./cmp.nix
     ./colors.nix
     ./conform.nix
-    ./dap.nix
-    ./gitsigns.nix
     ./godot.nix
     ./guess-indent.nix
     ./lsp.nix
-    ./roslyn.nix
-    ./luasnip.nix
-    ./mini.nix
-    ./neotest.nix
     ./oil.nix
-    ./render-markdown.nix
+    ./roslyn.nix
     ./smart-splits.nix
-    ./substitute.nix
     ./telescope.nix
     ./treesitter-context.nix
     ./treesitter.nix

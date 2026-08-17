@@ -1,4 +1,4 @@
-{pkgs, lib, ...}: {
+{pkgs, ...}: {
   plugins.lsp = {
     enable = true;
     inlayHints = true;
