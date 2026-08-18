@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+  extraPackages = with pkgs; [alejandra gdtoolkit_4 csharpier google-java-format prettier];
   plugins.conform-nvim = {
     enable = true;
     settings = {
