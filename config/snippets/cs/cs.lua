@@ -43,18 +43,18 @@ local function get_csharp_namespace()
 	local above_root_dir = vim.fn.fnamemodify(root_file, ":h:h")
 	local namespace_path = string.gsub(cwd, above_root_dir, "", 1)
 
-	-- Capitialize the start of the string and any folder name
-	local characters_to_uppercase = { "^[a-z]", "/[a-z]" }
-	local namespace = namespace_path
-	for _, value in ipairs(characters_to_uppercase) do
-		namespace = string.gsub(namespace, value, function(s) return string.upper(s) end)
+	local function to_pascal_case(segment)
+		return (segment:gsub("[%-_]?([a-zA-Z0-9]+)", function(word)
+			return word:sub(1, 1):upper() .. word:sub(2)
+		end))
 	end
 
-	-- Change slashes to dots, remove any possible leading slash
-	namespace = string.gsub(namespace, "^/", "")
-	namespace = string.gsub(namespace, "/", ".")
+	local segments = {}
+	for segment in namespace_path:gmatch("[^/]+") do
+		table.insert(segments, to_pascal_case(segment))
+	end
 
-	return namespace
+	return table.concat(segments, ".")
 end
 
 local regular_snippets = {
