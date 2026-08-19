@@ -5,6 +5,7 @@
     ./godot.nix
     ./guess-indent.nix
     ./lsp.nix
+    ./luasnip.nix
     ./oil.nix
     ./roslyn.nix
     ./smart-splits.nix

@@ -51,15 +51,22 @@ local regular_snippets = {
 		finish = i(0)
 	})),
 
-	-- Proccess
+	-- Process
   s("pr", fmta("public override void _Process(double delta)\n{\n\t<finish>\n}\n",
 	{
 		finish = i(0)
 	})),
 
-	-- PhysicProccess
+	-- PhysicsProcess
   s("ppr", fmta("public override void _PhysicsProcess(double delta)\n{\n\t<finish>\n}\n",
 	{
+		finish = i(0)
+	})),
+
+	-- Annoying repetitive null check
+  s("gdnull", fmta("if (<name> == null) {\n{\n\tGD.PushError(\"Missing dependencies.\");\n\treturn;\n}\n<finish>",
+	{
+		name = i(1, "Name"),
 		finish = i(0)
 	})),
 }
