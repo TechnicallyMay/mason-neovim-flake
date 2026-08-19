@@ -1,5 +1,6 @@
 {
   imports = [
+    ./autoclose.nix
     ./colors.nix
     ./conform.nix
     ./godot.nix
