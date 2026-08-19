@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   globals = {
     mapleader = " ";
     maplocalleader = " ";
@@ -42,5 +42,7 @@
 
     statusline = "%f";
     termguicolors = true;
+
+    dictionary = "${pkgs.scowl}/share/dict/words.txt";
   };
 }
