@@ -14,4 +14,14 @@
       '';
     }
   ];
+
+  keymaps = [
+    {
+      key = "<C-Space>";
+      action = "<C-n>";
+      mode = "i";
+      options.desc = "Trigger LSP completion";
+      options.silent = true;
+    }
+  ];
 }
