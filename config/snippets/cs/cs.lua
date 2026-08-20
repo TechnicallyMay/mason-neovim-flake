@@ -66,27 +66,6 @@ local regular_snippets = {
 		end, {})
 	})),
 
-	-- Doc comment
-	s("///", fmt("/// <summary>\n///\t{finish}\n/// </summary>",
-	{
-		finish = i(0),
-	})),
-
-	-- Var
-	postfix(".var", {
-		d(1, function(_, parent)
-			local splitParts = vim.split(parent.snippet.env.POSTFIX_MATCH, '.', { plain = true });
-			local defaultName = splitParts[#splitParts]
-			defaultName = string.lower(string.sub(defaultName, 1, 1)) .. string.sub(defaultName, 2)
-
-			return sn(nil, fmt("var {name} = {value}",
-			{
-				name = i(1, defaultName),
-				value = t(parent.snippet.env.POSTFIX_MATCH .. ";")
-			}))
-		end, {}),
-	}),
-
 	-- If
 	s("if ", fmta("if (<condition>)\n{\n\t<finish>\n}",
 	{
@@ -123,6 +102,27 @@ local regular_snippets = {
 	-- TODO: 'For' postfix
 }
 
-local auto_snippets = { };
+local auto_snippets = {
+	-- Doc comment
+	s("///", fmt("/// <summary>\n///\t{finish}\n/// </summary>",
+	{
+		finish = i(0),
+	})),
+
+	-- Var
+	postfix(".var", {
+		d(1, function(_, parent)
+			local splitParts = vim.split(parent.snippet.env.POSTFIX_MATCH, '.', { plain = true });
+			local defaultName = splitParts[#splitParts]
+			defaultName = string.lower(string.sub(defaultName, 1, 1)) .. string.sub(defaultName, 2)
+
+			return sn(nil, fmt("var {name} = {value}",
+			{
+				name = i(1, defaultName),
+				value = t(parent.snippet.env.POSTFIX_MATCH .. ";")
+			}))
+		end, {}),
+	}),
+};
 
 return regular_snippets, auto_snippets
