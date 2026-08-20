@@ -1,6 +1,6 @@
 {
   opts.complete = "o";
-  opts.completeopt = "fuzzy,menuone,popup,noselect";
+  opts.completeopt = "fuzzy,menuone,popup,noinsert";
   opts.autocomplete = false;
   autoCmd = [
     {
@@ -8,7 +8,7 @@
       callback.__raw = ''
           function(ev)
             vim.lsp.completion.enable(true, ev.data.client_id, ev.buf, {
-              autotrigger = false;
+              autotrigger = true;
           })
         end
       '';
