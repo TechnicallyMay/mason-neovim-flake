@@ -7,6 +7,13 @@
       options.desc = "Remove any highlighted matches";
       options.silent = true;
     }
+    {
+      key = "<C-BS>";
+      action = "<C-W>";
+      "mode" = "i";
+      options.desc = "Backspace word";
+      options.silent = true;
+    }
 
     # Buffers
     ## Navigate
