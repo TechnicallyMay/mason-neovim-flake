@@ -34,7 +34,7 @@
         #   action = "references";
         #   desc = "[G]oTo [R]eferences";
         # };
-        gi = {
+        gI = {
           action = "implementation";
           desc = "[G]oTo [I]mplementation";
         };
